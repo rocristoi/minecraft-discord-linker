@@ -6,14 +6,14 @@ This repository contains a Discord bot and a plugin that allow users to link the
 
 1. Download the pre-compiled plugin from the [Releases](https://github.com/cristilmao/minecraft-discord-linker/releases) section of this repository.
 
-2. To compile the plugin from the Java source code, navigate to the `Java Plugin` folder and follow the build instructions provided.
+1B. To ***compile*** the plugin from the Java source code, navigate to the `Java Plugin` folder and follow the build instructions provided.
 
-3. In the `index.js` file, make the following configuration changes:
+2. In the `index.js` file, make the following configuration changes:
     - Replace `YOUR_DISCORD_BOT_TOKEN` with your Discord bot token.
     - Replace `YOUR_CLIENT_ID` with your bot's client ID.
     - Replace `YOUR_GUILD_ID` with your Discord guild (server) ID.
 
-4. Set up a MySQL database, and configure the database connection details in the `index.js` file.
+2. Set up a MySQL database, and configure the database connection details in the `index.js` file.
 
 ## Requirements
 
