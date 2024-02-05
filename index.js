@@ -99,7 +99,7 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) throw err;
-  console.log('Connected to Astrex Login MySQL database.');
+  console.log('Connected to Login MySQL database.');
 });
 
 // Express server routes
@@ -170,7 +170,7 @@ client.once('ready', () => {
                 },
                 timestamp: new Date(),
                 footer: {
-                  text: 'Astrex.pro Bot',
+                  text: 'github/cristilmao',
                 },
               };
               
@@ -202,7 +202,7 @@ client.once('ready', () => {
                 },
                 timestamp: new Date(),
                 footer: {
-                  text: 'Astrex.pro Bot',
+                  text: 'github/cristilmao',
                 },
               };
     
@@ -289,7 +289,7 @@ client.once('ready', () => {
                 description: 'Your Account was Successfully Unlinked',
                 timestamp: new Date(),
                 footer: {
-                  text: 'See you soon! | Astrex.pro Bot',
+                  text: 'See you soon! | github/cristilmao',
                 },
               };
   
@@ -304,7 +304,7 @@ client.once('ready', () => {
             description: `My database shows that you don't have an account linked with us, **yet** 🤨`,
             timestamp: new Date(),
             footer: {
-              text: 'Astrex.pro Bot',
+              text: 'github/cristilmao',
             },
           };
           interaction.reply({ embeds: [doesnExist] });
@@ -395,7 +395,7 @@ function newEmbed(title, color, description, image = 0) {
       description: description,
       timestamp: new Date(),
       footer: {
-        text: 'Astrex.pro Bot',
+        text: 'github/cristilmao',
       },
     }
   } else {
@@ -408,7 +408,7 @@ function newEmbed(title, color, description, image = 0) {
     },
     timestamp: new Date(),
     footer: {
-      text: 'Astrex.pro Bot',
+      text: 'github/cristilmao',
     },
   };
 }
