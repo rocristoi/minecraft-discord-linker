@@ -60,7 +60,7 @@ public final class LoginSystem extends JavaPlugin {
     public void onEnable() {
         getLogger().info("----------------------------------------------");
         getLogger().info("     +******************+");
-        getLogger().info("     |   Astrex Login   |");
+        getLogger().info("     |     Login Bot    |");
         getLogger().info("     |------------------|");
         getLogger().info("     |    By Cristoi    |");
         getLogger().info("     +*******************");
@@ -112,7 +112,7 @@ public final class LoginSystem extends JavaPlugin {
         } else if (label.equalsIgnoreCase("unlink")) {
           // This shhould be updated, check if a newer version exists!
             player.sendMessage("§k|§r §8<> §7Your account can be unlinked by running §b/unlink §7on our discord server.");
-            player.sendMessage("§b§lINFO §7§l>> §9discord.astrex.pro");
+            player.sendMessage("§b§lINFO §7§l>> §9discord.yourserver.pro"); // ⚠️ CHANGE WITH SERVER LINK
             return true;
         } else if (label.equalsIgnoreCase("amilinked")) {
           // Check if player is linked
@@ -151,7 +151,7 @@ public final class LoginSystem extends JavaPlugin {
 
         RequestBody body = RequestBody.create(json, MEDIA_TYPE_JSON);
         Request request = new Request.Builder()
-                .url("https://panel.astrex.pro:3000/verification") // Use HTTPS
+                .url("https://website:3000/verification") // Use HTTPS! ⚠️
                 .post(body)
                 .addHeader("x-api-key", "**************************") // Replace with your actual API key from the discord bot
                 .build();
@@ -160,7 +160,7 @@ public final class LoginSystem extends JavaPlugin {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
-                getServer().getScheduler().runTask(AstrexLogin.this, () -> player.sendMessage("An error occurred while sending the verification code. Please contact an administrator."));
+                getServer().getScheduler().runTask(LoginSystem.this, () -> player.sendMessage("An error occurred while sending the verification code. Please contact an administrator."));
             }
 
             @Override
@@ -176,7 +176,7 @@ public final class LoginSystem extends JavaPlugin {
                         getLogger().info("Server responded with status code: " + statusCode);
                         getLogger().info("Server error response: " + errorResponse);
 
-                        getServer().getScheduler().runTask(AstrexLogin.this, () ->
+                        getServer().getScheduler().runTask(LoginSystem.this, () ->
                                 player.sendMessage("There was a problem with your link request. Please contact the server administrators. Status Code: " + statusCode));
                     }
                 } finally {
