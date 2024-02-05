@@ -14,6 +14,7 @@ This repository contains a Discord bot and a plugin that allow users to link the
 4. Configure the database connection details in the `main.java` file.
 
 Here is how `your user_mapping` table should look like:
+
 ![image](https://github.com/cristilmao/minecraft-discord-linker/assets/68418256/18eee652-467d-4b93-a56e-08f5dbee8c25)
 
 
@@ -22,6 +23,7 @@ Here is how `your user_mapping` table should look like:
 - Basic knowledge of Node.js, Discord.js, and npm.
 - Basic understanding of how Java plugins for Minecraft work.
 - A MySQL database for storing verification data.
+- Domain name and certificates to use SSL encryption for the API - use [Certbot](https://certbot.eff.org/), it's free!
 
 ## License
 
