@@ -1,4 +1,4 @@
-# Discord Minecraft Linker Bot
+# Discord Minecraft Linker Bot V1 Alpha
 
 This repository contains a Discord bot and a plugin that allow users to link their Minecraft accounts with Discord by verifying a secret key. The plugin provides a secure way to establish the link, and the bot handles the verification process. It is entirely written by me from scratch, so **it may present bugs.** ❗Currently, there is no measure whatsoever for handling SQL Injections! Use at your own risk!
 ## Installation
