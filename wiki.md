@@ -114,6 +114,7 @@ Discord Commands
 - **dislink.cooldown.bypass**: Allows players to bypass command cooldowns.
 
 ## Troubleshooting
+- If you get an `Unable to create or change a table without a primary key` error, please disable the system variable 'sql_require_primary_key' in your MySQL server configuration. This will be fixed in newer versions.
 - Ensure the bot is online and has the required permissions in Discord.
 - Verify the MySQL database connection details in the `config.yml`.
 - Check the server logs for any error messages related to the plugin.
