@@ -46,6 +46,7 @@ DisLink is a powerful Minecraft plugin that bridges the gap between your Minecra
 - **Account Linking**: Players can link their Minecraft usernames with their Discord accounts through simple commands.
 - **MySQL Database Integration**: Scalable integration for managing user mappings.
 - **Discord Bot Integration**: Handles commands issued in Discord and manages account synchronization.
+- **Groups**: Give roles on discord based on the user's primary group in luckperms. 
 - **Detailed Configurations**: Easily customizable settings for enhanced control.
 - **Titles and Notifications**: Provides in-game titles and notifications for various events.
 - **Cooldown Bypass Permissions**: Permissions for players to bypass cooldowns on commands.
@@ -94,6 +95,22 @@ discord:
 - **footer**: Custom footer text for messages sent by the bot.
 - **change-nickname**: Set to 1 to enable the bot's ability to change user nicknames in Discord.
 - **nickname-format**: Custom format for displaying nicknames, where **{disUsername}** is replaced with the user's Discord username and **{mcUsername}** with their Minecraft username.
+
+
+### Groups Configuration
+
+```yaml 
+groups:
+  enabled: 0  # 1 for enabled, 0 for disabled
+  remove-role: 0 # Removes the discord role on unlink. 1 for enabled, 0 for disabled
+  list:
+    - mcName: 'admin'
+      disID: '1234567890'
+    - mcName: 'mod'
+      disID: '0987654321' # Add more groups by following the format above.
+```
+- Each `mcname disID` pair represents the primary Minecraft group name a user should belong to (mcname) and its corresponding Discord role ID (disID).
+
 ## Usage
 
 ### Linking Accounts
@@ -106,12 +123,14 @@ Minecraft Commands
 - `/link <username>`: Initiates the account linking process.
 - `/unlink`: Unlinks the Minecraft and Discord accounts.
 - `/amilinked`: Checks if a player is linked.
+- `/whoislinked`: Opens a GUI that lets you see who is link & also unlink them. See [Permissions](#permissions)
 
 Discord Commands
 - `/verify <key>`: Links a user if the key is correct.
 - `/unlink`: Unlinks the Minecraft and Discord accounts.
 ## Permissions
 - **dislink.cooldown.bypass**: Allows players to bypass command cooldowns.
+- **dislink.admin**: Allows players to use `/whoislinked`
 
 ## Troubleshooting
 - If you get an `Unable to create or change a table without a primary key` error, please disable the system variable 'sql_require_primary_key' in your MySQL server configuration. This will be fixed in newer versions.
